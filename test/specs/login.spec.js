@@ -13,13 +13,13 @@ describe('Login', () => {
 
     it('I failed to login without input credential' , async () => {
       await LoginPage.btnSubmit.click();
-      await expect(SecurePage.flashAlert).toHaveTextContaining('Epic sadface: Username is required')
+      await expect(SecurePage.alertRequired).toHaveTextContaining('Epic sadface: Username is required')
       await LoginPage.closeAlertbtn.click();
     });
     
     it('I failed to login with invalid credential' , async () => {
       await LoginPage.login('standard_user123','secret_sauce123');
-      await expect(SecurePage.alertRequired).toHaveTextContaining('Epic sadface: Username and password do not match any user in this service')
+      await expect(SecurePage.flashAlert).toHaveTextContaining('Epic sadface: Username and password do not match any user in this service')
       await LoginPage.closeAlertbtn.click();
     });
 
