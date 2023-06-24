@@ -1,6 +1,6 @@
 # Quality Assurance Engineer Test Assesment
 
-This automation is written in Javascript selenium using page object page
+This automation is written in Javascript selenium using page object model
 
 ## Running Tests
 
